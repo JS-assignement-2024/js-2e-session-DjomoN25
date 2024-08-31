@@ -1,0 +1,350 @@
+/* Global Styles */
+body {
+    font-family: 'Indie Flower', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Styles de base pour la navbar */
+.w3-top {
+    background-color: blue; 
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.title-ex{
+    text-align: center;
+}
+.w3-bar-item {
+    font-family: 'Comic Sans MS', cursive; 
+    font-size: 24px; 
+    color: #FFFFFF; 
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 0 5px;
+    border-radius: 10px; 
+}
+
+.w3-bar-item:hover {
+    background-color: purple;
+    transform: scale(1.1); 
+}
+
+/* Ajout d'icônes aux boutons */
+.w3-bar-item::before {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+/* --- Login page --- */
+.login-page {
+    background-image: url('../images/math.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px; /* Ajout de padding pour éviter que le contenu soit trop près des bords sur les petits écrans */
+}
+
+.login-page form {
+    background: rgba(255, 255, 255, 0.9); /* Légère transparence pour s’intégrer mieux avec le fond */
+    padding: 2rem;
+    border-radius: 12px; /* Coins plus arrondis pour un look moderne */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée pour un effet de profondeur */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Effet de flou sur le fond derrière le formulaire */
+}
+
+.login-page label {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold; /* Mettre les labels en gras pour une meilleure lisibilité */
+    color: #333; /* Couleur de texte sombre pour un bon contraste */
+}
+
+.login-page input[type="text"], .login-page input[type="password"] {
+    width: calc(100% - 2rem);
+    padding: 0.8rem;
+    border: 1px solid #ccc; /* Couleur de bordure adoucie */
+    border-radius: 4px;
+    margin-bottom: 1.5rem; /* Plus d'espace entre les champs */
+    font-size: 1rem;
+    box-sizing: border-box; /* S'assure que le padding est pris en compte dans la largeur */
+    transition: border-color 0.3s ease;
+}
+
+.login-page input[type="text"]:focus, .login-page input[type="password"]:focus {
+    border-color: #007bff; /* Couleur de la bordure change en bleu au focus */
+    outline: none; /* Suppression de l'outline par défaut */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Légère ombre bleue autour du champ au focus */
+}
+
+.login-page button {
+    font-family: 'Indie Flower', cursive;
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px; /* Coins plus arrondis pour harmoniser avec le reste de la page */
+    font-size: 1.2rem; /* Légère augmentation de la taille de la police */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Ajout d'une transition sur le hover */
+}
+
+.login-page button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Légère mise en avant au survol */
+}
+
+#message {
+    margin-top: 1.5rem;
+    color: #007bff;
+    font-size: 1rem;
+}
+
+
+/* --- Exercises page --- */
+.exercise-page {
+    font-family: 'Indie Flower', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../images/math.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#exercise-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: auto;
+    max-width: 800px;
+    margin: 20px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#drag-drop-container {
+    display: flex;
+    justify-content: space-between; /* Écarte les éléments sur toute la largeur disponible */
+    align-items: center; /* Aligne les éléments verticalement au centre */
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.exercise {
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 20px); /* Adapté pour les écrans plus petits */
+    max-width: 400px; /* Largeur maximale pour les grands écrans */
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    background-color: #e90e0e;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exercise:hover {
+    transform: scale(1.05); /* Légère mise en avant au survol */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+}
+
+.exercise div {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.answer {
+    margin: 10px;
+    padding: 20px; /* Augmentation du padding pour un meilleur équilibre visuel */
+    border: 1px solid #333;
+    background-color: #E0E0E0;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 45%; /* Limite la largeur pour s'assurer que les éléments tiennent côte à côte */
+    text-align: center;
+}
+
+.answer:hover {
+    background-color: #D3D3D3;
+    transform: scale(1.05);
+}
+
+.drop-zone {
+    width: 45%; /* Limite la largeur pour correspondre à celle du drag */
+    height: 100px; /* Augmentation de la hauteur pour plus de visibilité */
+    margin: 10px;
+    padding: 20px;
+    border: 2px dashed #333;
+    background-color: #F0F8FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.drop-zone:hover {
+    background-color: red;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+input[type="number"] {
+    background-color: purple; 
+    font-family: 'Indie Flower', cursive; /* Harmonisation des polices */
+    color: #333; /* Texte plus foncé pour une meilleure lisibilité */
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    font-size: 24px;
+    width: 50%;
+    max-width: 300px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+input[type="number"]:focus {
+    background-color: green; /* Couleur légèrement différente pour le focus */
+    outline: none; /* Supprimer le contour par défaut */
+    transform: scale(1.05); /* Légère mise en avant au focus */
+}
+
+button {
+    background-color: blue;
+    font-family: 'Indie Flower', cursive; /* Harmonisation des polices */
+    color: #000000; /* Texte plus foncé pour une meilleure lisibilité */
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.selected {
+    background-color: green; /* Vert */
+    color: white;
+}
+
+button:hover {
+    background-color: red; /* Couleur plus foncée au survol */
+    transform: scale(1.1); /* Légère mise en avant au survol */
+}
+
+#answer-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* --- Scores page --- */
+.scores-page {
+    font-family: 'Indie Flower', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-image: url('../images/math.jpg');
+    background-size: cover;   
+    background-repeat: no-repeat;
+}
+
+.table-wrapper {
+    width: 100%;
+    max-width: 800px; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    background: rgba(255, 255, 255, 0.9); /* Légère transparence pour se démarquer du fond */
+    border-radius: 12px; /* Coins arrondis pour un look plus moderne */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet d'élévation */
+}
+
+#scoresTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+    text-align: center; 
+    border: none; /* Suppression de la bordure générale */
+}
+
+#scoresTable th, #scoresTable td {
+    padding: 15px; /* Augmentation du padding pour plus d'espace */
+    border-bottom: 1px solid #ddd; /* Bordure légère entre les lignes */
+}
+
+#scoresTable thead th {
+    background-color: #f7f7f7; /* Couleur légèrement plus claire pour le fond */
+    color: #333;
+    padding: 15px;
+    border-bottom: 2px solid #ddd;
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase; /* Texte en majuscules pour plus d'impact */
+    letter-spacing: 1px; /* Espacement des lettres pour une meilleure lisibilité */
+}
+
+#scoresTable tbody tr {
+    background-color: #ffffff;
+    transition: background-color 0.3s ease; /* Transition douce pour le changement de fond */
+}
+
+#scoresTable tbody tr:hover {
+    background-color: #f0f0f0; /* Changement de fond au survol */
+}
+
+#scoresTable tbody td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Style pour les premières lignes */
+.gold {
+    font-size: 25px;
+    background-color: gold !important;
+    font-weight: bold; /* Texte en gras pour souligner l'importance */
+    color: #333; /* Couleur de texte pour un meilleur contraste */
+}
+
+.silver {
+    font-size: 22px;
+    background-color: silver !important;
+    font-weight: bold;
+    color: #333;
+}
+
+.bronze {
+    font-size: 20px; /* Taille légèrement plus grande pour une meilleure hiérarchie */
+    background-color: brown !important;
+    font-weight: bold;
+    color: #fff; /* Texte blanc pour un meilleur contraste */
+}
+
+
+
